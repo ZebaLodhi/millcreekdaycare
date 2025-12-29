@@ -1,0 +1,8 @@
+# Millcreek Home Childcare Robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://millcreekchildcare.com/sitemap.xml
+
+
+

@@ -1,0 +1,31 @@
+MILLCREEK HOME CHILDCARE - IMAGE PLACEHOLDERS
+==============================================
+
+Please add the following images to this folder:
+
+1. hero-children.jpg
+   - A happy image of children playing or learning
+   - Recommended size: 500x400 pixels minimum
+   - This is the main hero image on the homepage
+
+2. /brand/ folder:
+   - logo.png - Your logo (recommended: 200x80 pixels)
+   - favicon.ico - Small icon for browser tabs (16x16 or 32x32)
+
+3. /images/programs/ folder:
+   - infant.jpg - Image representing infant care
+   - toddler.jpg - Image representing toddler program
+   - preschool.jpg - Image representing preschool
+
+4. og-image.jpg
+   - Social media preview image
+   - Recommended size: 1200x630 pixels
+
+TIPS:
+- Use high-quality, cheerful photos of children in educational settings
+- Ensure you have proper permissions/releases for any photos of children
+- Optimize images for web (compress without losing quality)
+- Use .jpg for photos, .png for logos with transparency
+
+
+

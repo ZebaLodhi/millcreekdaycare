@@ -1,0 +1,10 @@
+BRAND ASSETS FOLDER
+===================
+
+Add your brand assets here:
+- logo.png (main logo)
+- logo-light.png (logo for dark backgrounds)
+- favicon.ico (browser tab icon)
+
+
+

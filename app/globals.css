@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   Base styles with shadcn CSS variables
+   ========================= */
+@layer base {
+  :root {
+    /* Font variables injected by next/font */
+    --font-display: var(--font-fredoka);
+    --font-body: var(--font-nunito);
+
+    /* shadcn CSS variables - mapped to brand colors */
+    --background: 34 100% 96%; /* cream #FFF4E8 */
+    --foreground: 212 40% 48%; /* navy #4877AD */
+
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 212 40% 48%; /* navy */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 40% 48%;
+
+    --primary: 212 40% 48%; /* navy #4877AD */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    --secondary: 177 55% 56%; /* teal #48D1CC */
+    --secondary-foreground: 212 40% 48%; /* navy */
+
+    --accent: 186 64% 73%; /* light cyan #8ADDE6 */
+    --accent-foreground: 212 40% 48%; /* navy */
+
+    --muted: 34 100% 96%; /* cream */
+    --muted-foreground: 212 30% 60%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 212 30% 85%;
+    --input: 212 30% 85%;
+    --ring: 212 40% 48%;
+
+    --chart-1: 177 55% 56%;
+    --chart-2: 186 64% 73%;
+    --chart-3: 300 35% 88%;
+    --chart-4: 212 40% 48%;
+    --chart-5: 45 92% 65%;
+
+    --radius: 0.75rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-navy antialiased;
+    font-family: var(--font-body), system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-navy;
+    font-family: var(--font-display), cursive;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  .dark {
+    --background: 212 40% 10%;
+    --foreground: 0 0% 98%;
+    --card: 212 40% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 212 40% 15%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 177 55% 56%;
+    --primary-foreground: 212 40% 10%;
+    --secondary: 212 30% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 212 30% 25%;
+    --muted-foreground: 212 20% 65%;
+    --accent: 186 64% 40%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 212 30% 25%;
+    --input: 212 30% 25%;
+    --ring: 177 55% 56%;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+/* =========================
+   Component classes
+   ========================= */
+@layer components {
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .section-header {
+    @apply text-center mb-12 md:mb-16;
+  }
+
+  .section-header h2 {
+    @apply text-navy mb-4;
+  }
+
+  .section-header p {
+    @apply text-navy/70 max-w-2xl mx-auto text-lg md:text-xl;
+  }
+
+  .section-header.light h2 {
+    @apply text-white;
+  }
+
+  .section-header.light p {
+    @apply text-white/90;
+  }
+}
+
+/* =========================
+   Utilities (animations & effects)
+   ========================= */
+@layer utilities {
+  /* Gentle float animation */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Entry fade */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out both;
+  }
+
+  /* Blob shape animation */
+  @keyframes blob {
+    0%,
+    100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    50% {
+      border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+    }
+  }
+
+  .animate-blob {
+    animation: blob 6s ease-in-out infinite;
+  }
+}
+
+/* =========================
+   Respect reduced motion
+   ========================= */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-fade-in,
+  .animate-blob {
+    animation: none !important;
+  }
+}

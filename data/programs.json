@@ -1,0 +1,50 @@
+[
+  {
+    "id": "infant",
+    "title": "Infant Care",
+    "ageRange": "6 weeks - 18 months",
+    "description": "Gentle, responsive care that nurtures your baby's development through sensory exploration, secure attachments, and loving interactions.",
+    "features": [
+      "Individualized feeding and sleep schedules",
+      "Tummy time and motor skill development",
+      "Sensory exploration activities",
+      "Language development through songs and stories",
+      "Daily communication with parents",
+      "Safe, nurturing environment"
+    ],
+    "image": "/images/programs/infant.jpg"
+  },
+  {
+    "id": "toddler",
+    "title": "Toddler Program",
+    "ageRange": "18 months - 3 years",
+    "description": "Active learning experiences that support language development, motor skills, and growing independence.",
+    "features": [
+      "Language-rich environment",
+      "Art and creative expression",
+      "Gross motor play and outdoor activities",
+      "Introduction to sharing and cooperation",
+      "Potty training support",
+      "Structured daily routines"
+    ],
+    "image": "/images/programs/toddler.jpg"
+  },
+  {
+    "id": "preschool",
+    "title": "Preschool",
+    "ageRange": "3 - 5 years",
+    "description": "Kindergarten preparation through structured learning, social skills development, and creative expression.",
+    "features": [
+      "Early literacy and math concepts",
+      "Science and nature exploration",
+      "Social-emotional development",
+      "Creative arts and music",
+      "Physical education and outdoor play",
+      "Kindergarten readiness preparation"
+    ],
+    "image": "/images/programs/preschool.jpg"
+  }
+]
+
+
+
