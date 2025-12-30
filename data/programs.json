@@ -12,7 +12,7 @@
       "Daily communication with parents",
       "Safe, nurturing environment"
     ],
-    "image": "/images/programs/infant.jpg"
+    "image": "/images/infant.jpg"
   },
   {
     "id": "toddler",
@@ -27,7 +27,7 @@
       "Potty training support",
       "Structured daily routines"
     ],
-    "image": "/images/programs/toddler.jpg"
+    "image": "/images/toddler.jpg"
   },
   {
     "id": "preschool",
@@ -42,9 +42,6 @@
       "Physical education and outdoor play",
       "Kindergarten readiness preparation"
     ],
-    "image": "/images/programs/preschool.jpg"
+    "image": "/images/preschooler.jpg"
   }
 ]
-
-
-
