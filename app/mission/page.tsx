@@ -10,6 +10,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { Heart, BookOpen, Palette, Sprout, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Our Mission",
@@ -137,12 +138,37 @@ export default function MissionPage() {
               we strive to be a trusted partner for families and a leader in nurturing the
               next generation of creative thinkers and compassionate individuals.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-5xl">
-              <span title="Love">❤️</span>
-              <span title="Learning">📚</span>
-              <span title="Play">🎨</span>
-              <span title="Growth">🌱</span>
-              <span title="Community">👨‍👩‍👧‍👦</span>
+            <div className="flex flex-wrap justify-center gap-6">
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-full bg-pink/20 flex items-center justify-center">
+                  <Heart className="w-8 h-8 text-pink" />
+                </div>
+                <span className="text-sm text-navy/70">Love</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+                  <BookOpen className="w-8 h-8 text-primary" />
+                </div>
+                <span className="text-sm text-navy/70">Learning</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-full bg-accent/40 flex items-center justify-center">
+                  <Palette className="w-8 h-8 text-orange-500" />
+                </div>
+                <span className="text-sm text-navy/70">Play</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-full bg-secondary/30 flex items-center justify-center">
+                  <Sprout className="w-8 h-8 text-secondary" />
+                </div>
+                <span className="text-sm text-navy/70">Growth</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center">
+                  <Users className="w-8 h-8 text-navy" />
+                </div>
+                <span className="text-sm text-navy/70">Community</span>
+              </div>
             </div>
           </div>
         </div>
