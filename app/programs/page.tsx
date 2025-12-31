@@ -62,11 +62,11 @@ export default function ProgramsPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-cream via-cream-light to-secondary/20 relative overflow-hidden">
+      <section className="pt-28 pb-12 bg-gradient-to-br from-cream via-cream-light to-secondary/20 relative overflow-hidden flex items-center">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-pink/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
         <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
 
-        <div className="container-custom relative z-10 text-center">
+        <div className="container-custom relative z-10 text-center mt-12">
           <h1 className="text-navy mb-4">Our Programs</h1>
           <p className="text-xl text-navy/80 max-w-2xl mx-auto">
             Age-appropriate programs designed to nurture growth at every stage
