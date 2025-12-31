@@ -31,7 +31,7 @@ export default function ProgramsPage() {
       id: "toddler",
       title: "Toddler Program",
       ageRange: "18 months - 3 years",
-      image: "/images/toddler.jpg",
+      image: "/images/toddler1.jpg",
       description: "Active learning experiences that support language development, motor skills, and growing independence. Our toddler program encourages exploration and discovery while building essential social and emotional skills.",
       features: [
         "Language-rich environment",
@@ -46,7 +46,7 @@ export default function ProgramsPage() {
       id: "preschool",
       title: "Preschool",
       ageRange: "3 - 5 years",
-      image: "/images/gallery-1.jpg",
+      image: "/images/preschool2.jpg",
       description: "Kindergarten preparation through structured learning, social skills development, and creative expression. Our preschool program builds confidence and school readiness while keeping the joy of learning alive.",
       features: [
         "Early literacy and math concepts",
