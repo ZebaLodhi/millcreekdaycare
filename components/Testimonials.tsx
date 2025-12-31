@@ -77,12 +77,9 @@ export default function Testimonials() {
       <div className="container-custom">
 
         {/* HEADER */}
-        <div className="section-header text-white">
-          <span>What Parents Say</span>
-          <h2>What Families Are Saying</h2>
-          <p className="text-white/80">
-            Real Google reviews from Mill Creek Child Care families
-          </p>
+        <div className="section-header light">
+          <h2>What Parents Say</h2>
+          <p>A testament to the love and trust we have built over the years</p>
         </div>
 
         {/* CAROUSEL WRAPPER */}
