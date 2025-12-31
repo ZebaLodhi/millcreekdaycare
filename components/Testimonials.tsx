@@ -1,62 +1,128 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+'use client'
+
+import { useState } from 'react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Avatar, AvatarFallback } from '@/components/ui/avatar'
+
+const reviews = [
+  {
+    content:
+      "Mrs. Batool always welcomes our son with a smile and hug. He comes home excited with worksheets that work on letters, counting, and tactile skills. He’s made many friends and is always eager to play when he arrives.",
+    author: 'Sarah G.',
+    initials: 'SG',
+  },
+  {
+    content:
+      "We’ve been very happy with our experience at Mill Creek Child Care. Batool and her team are warm, caring, and very patient with the kids.",
+    author: 'Lucia Miranda Reyes',
+    initials: 'LR',
+  },
+  {
+    content:
+      "My son has been going to Ms. B’s daycare since he was 5 months old. My experience has been nothing short of amazing.",
+    author: 'Sakshi Jhawar',
+    initials: 'SJ',
+  },
+  {
+    content:
+      "Mrs. B made us feel our daughter was loved and well taken care of. After three years, she still asks to go back.",
+    author: 'Salesca Rodriguez',
+    initials: 'SR',
+  },
+  {
+    content:
+      "She is affectionate, kind, and attentive. My daughter loves her and asks to go every day.",
+    author: 'Yeldys Leiva Saenz',
+    initials: 'YS',
+  },
+  {
+    content: 'Highly recommend their services.',
+    author: 'Elahe Tanhaei',
+    initials: 'ET',
+  },
+]
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      content: "Millcreek has been a blessing for our family. The loving environment and dedicated caregivers have helped our daughter blossom. She comes home excited to share everything she learned!",
-      author: "Sarah M.",
-      child: "Parent of Emma, 3",
-      initials: "SM",
-    },
-    {
-      content: "As first-time parents, we were nervous about childcare. The team at Millcreek made us feel completely at ease. They truly treat every child like family.",
-      author: "James & Rebecca T.",
-      child: "Parents of Liam, 18 months",
-      initials: "JR",
-    },
-    {
-      content: "The structured yet flexible approach has prepared our son perfectly for kindergarten. His confidence and social skills have grown tremendously!",
-      author: "Maria L.",
-      child: "Parent of Noah, 5",
-      initials: "ML",
-    },
-  ];
+  const [index, setIndex] = useState(0)
+  const visible = 3
+  const maxIndex = reviews.length - visible
+
+  const next = () => setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1))
+  const prev = () => setIndex((prev) => (prev <= 0 ? maxIndex : prev - 1))
 
   return (
-    <section className="section bg-gradient-to-br from-primary to-navy">
+    <section className="bg-gradient-to-br from-primary to-navy py-24">
       <div className="container-custom">
-        <div className="section-header light">
-          <h2>What Parents Say</h2>
-          <p>Hear from families in our community</p>
+
+        {/* HEADER */}
+        <div className="text-center text-white mb-12">
+          <h2 className="text-4xl font-bold mb-2">What Families Are Saying</h2>
+          <p className="text-white/80">
+            Real Google reviews from Mill Creek Child Care families
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-0 shadow-soft rounded-2xl">
-              <CardContent className="p-8">
-                <p className="text-navy/80 italic leading-relaxed mb-6">
-                  &ldquo;{testimonial.content}&rdquo;
-                </p>
-                <div className="flex items-center gap-4">
-                  <Avatar className="h-12 w-12">
-                    <AvatarFallback className="bg-secondary text-white font-bold">
-                      {testimonial.initials}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <strong className="text-navy block">{testimonial.author}</strong>
-                    <span className="text-navy/60 text-sm">{testimonial.child}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* CAROUSEL WRAPPER */}
+        <div className="relative max-w-6xl mx-auto overflow-hidden">
+
+          {/* LEFT ARROW */}
+          <button
+            onClick={prev}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-navy rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
+            aria-label="Previous"
+          >
+            ‹
+          </button>
+
+          {/* RIGHT ARROW */}
+          <button
+            onClick={next}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-navy rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
+            aria-label="Next"
+          >
+            ›
+          </button>
+
+          {/* SLIDER */}
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${index * (100 / visible)}%)`,
+            }}
+          >
+            {reviews.map((review, i) => (
+              <div
+                key={i}
+                className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4"
+              >
+                <Card className="border-0 shadow-soft rounded-2xl h-full">
+                  <CardContent className="p-8 flex flex-col h-full">
+                    <p className="text-navy/80 italic leading-relaxed mb-6">
+                      “{review.content}”
+                    </p>
+
+                    <div className="mt-auto flex items-center gap-4">
+                      <Avatar className="h-12 w-12">
+                        <AvatarFallback className="bg-secondary text-white font-bold">
+                          {review.initials}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <strong className="text-navy block">
+                          {review.author}
+                        </strong>
+                        <span className="text-navy/60 text-sm">
+                          Google Review
+                        </span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
-
-
-

@@ -25,7 +25,7 @@ export default function ProgramsPage() {
       id: "infant",
       title: "Infant Care",
       ageRange: "6 weeks - 18 months",
-      image: "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=500&h=400&fit=crop",
+      image: "/images/baby2.jpg",
       description: "Gentle, responsive care that nurtures your baby's development through sensory exploration, secure attachments, and loving interactions. Our infant program focuses on creating a safe, warm environment where your little one can grow and thrive.",
       features: [
         "Individualized feeding and sleep schedules",
@@ -40,7 +40,7 @@ export default function ProgramsPage() {
       id: "toddler",
       title: "Toddler Program",
       ageRange: "18 months - 3 years",
-      image: "https://images.unsplash.com/photo-1567448400815-46da0c3949e8?w=500&h=400&fit=crop",
+      image: "/images/toddler.jpg",
       description: "Active learning experiences that support language development, motor skills, and growing independence. Our toddler program encourages exploration and discovery while building essential social and emotional skills.",
       features: [
         "Language-rich environment",
@@ -55,7 +55,7 @@ export default function ProgramsPage() {
       id: "preschool",
       title: "Preschool",
       ageRange: "3 - 5 years",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=400&fit=crop",
+      image: "/images/gallery-1.jpg",
       description: "Kindergarten preparation through structured learning, social skills development, and creative expression. Our preschool program builds confidence and school readiness while keeping the joy of learning alive.",
       features: [
         "Early literacy and math concepts",

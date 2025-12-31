@@ -51,7 +51,7 @@ export default function Footer() {
                 className="w-10 h-10 bg-white/10 hover:bg-accent rounded-full"
                 asChild
               >
-                <a href="mailto:info@millcreekchildcare.com" aria-label="Email">
+                <a href="mailto:bfali414@gmail.com" aria-label="Email">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
@@ -123,18 +123,18 @@ export default function Footer() {
             <ul className="space-y-3 text-white/80">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span>123 Millcreek Lane<br />Your City, State 12345</span>
+                <span>7300, Miller Fall Road<br />Rockville, MD 20855</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <a href="tel:+11234567890" className="hover:text-accent transition-colors">
-                  (123) 456-7890
+                <a href="tel:+13053210846" className="hover:text-accent transition-colors">
+                  (305) 321-0846
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <a href="mailto:info@millcreekchildcare.com" className="hover:text-accent transition-colors">
-                  info@millcreekchildcare.com
+                <a href="mailto:bfali414@gmail.com" className="hover:text-accent transition-colors">
+                  bfali414@gmail.com
                 </a>
               </li>
             </ul>
@@ -145,7 +145,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <Separator className="mt-12 bg-white/20" />
         <div className="pt-8 text-center text-sm text-white/60">
-          <p>&copy; {currentYear} Millcreek Home Childcare. All rights reserved.</p>
+          <p>&copy; 2025 Millcreek Home Childcare. All rights reserved. Website by DigiLift For Daycare</p>
         </div>
 
       </div>

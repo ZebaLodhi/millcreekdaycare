@@ -1,6 +1,8 @@
 'use server';
 
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export type TourBookingData = {
   parentName: string;
@@ -61,19 +63,9 @@ export async function submitTourBooking(
     : 'Not specified';
 
   try {
-    // Create transporter using environment variables
-    const transporter = nodemailer.createTransport({
-      service: process.env.EMAIL_SERVICE || 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    // Email content
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: 'bfali414@gmail.com',
+    const { error } = await resend.emails.send({
+      from: 'Millcreek Childcare <onboarding@resend.dev>',
+      to: ['bfali414@gmail.com'],
       replyTo: data.email,
       subject: `New Tour Request from ${data.parentName}`,
       html: `
@@ -113,28 +105,15 @@ export async function submitTourBooking(
           </p>
         </div>
       `,
-      text: `
-New Daycare Tour Request
+    });
 
-Parent Information:
-- Name: ${data.parentName}
-- Email: ${data.email}
-- Phone: ${data.phone || 'Not provided'}
-
-Tour Details:
-- Child's Age Group: ${childAgeLabels[data.childAge] || 'Not specified'}
-- Preferred Date: ${formattedDate}
-- Preferred Time: ${timeLabels[data.preferredTime] || 'Not specified'}
-
-${data.notes ? `Additional Notes:\n${data.notes}` : ''}
-
----
-This tour request was submitted through the Mill Creek Home Childcare website.
-      `,
-    };
-
-    // Send the email
-    await transporter.sendMail(mailOptions);
+    if (error) {
+      console.error('Resend error:', error);
+      return {
+        success: false,
+        message: 'There was an error submitting your request. Please try again or contact us directly.',
+      };
+    }
 
     return {
       success: true,

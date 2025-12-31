@@ -8,42 +8,30 @@ export default function AboutPreview() {
     <section className="section bg-cream">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Images */}
-          <div className="relative">
+          {/* Owner Image */}
+          <div className="relative flex justify-center">
             <Image
-              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500&h=400&fit=crop"
-              alt="Child learning at Millcreek"
-              width={500}
-              height={400}
-              className="rounded-2xl shadow-soft-lg"
-            />
-            <Image
-              src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=280&h=220&fit=crop"
-              alt="Children playing together"
-              width={280}
-              height={220}
-              className="absolute -bottom-8 -right-8 rounded-2xl shadow-soft-lg border-4 border-white hidden md:block"
+              src="/images/batool.png"
+              alt="Batool - Owner of Shady Grove Children's Place"
+              width={400}
+              height={500}
+              className="rounded-2xl shadow-soft-lg object-cover"
             />
           </div>
 
           {/* Content */}
           <div>
             <Badge className="mb-6 bg-secondary text-white hover:bg-secondary/90 px-5 py-2 text-sm font-bold uppercase tracking-wide">
-              About Us
+              About the Owner
             </Badge>
             <h2 className="text-3xl md:text-4xl mb-6">
-              A Place Where Children Flourish
+              Meet Batool
             </h2>
             <p className="text-navy/70 mb-4">
-              At Millcreek Home Childcare, we believe every child deserves a nurturing
-              environment that supports their natural curiosity and love of learning.
-              Our experienced caregivers create meaningful experiences that help children
-              develop confidence, creativity, and essential life skills.
+              As the owner and primary caregiver at Mill Creek Home Childcare, I'm a devoted mother of 3 children, with 6 years of experience in child care. I hold an Associate's Degree in Computer Science and I am deeply passionate about fostering a supportive and educational environment for children.
             </p>
             <p className="text-navy/70 mb-6">
-              With over a decade of experience in early childhood education, we've
-              created a home away from home where children feel valued, respected,
-              and inspired to reach their full potential.
+              I decided to open my own daycare because of my love for nurturing young minds and witnessing their developmental milestones. I strive to provide a clean, secure, and compassionate space where children can learn, grow, and thrive.
             </p>
             <Button asChild>
               <Link href="/about">Learn More About Us</Link>

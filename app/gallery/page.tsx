@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
-import { Button } from "@/components/ui/button";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -21,53 +20,42 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop",
-      alt: "Children learning together",
-      category: "Learning",
+      src: "/images/gallery/2.jpeg",
+      alt: "Children at Mill Creek Home Childcare",
     },
     {
-      src: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&h=400&fit=crop",
-      alt: "Creative play time",
-      category: "Play",
+      src: "/images/gallery/3.jpeg",
+      alt: "Learning activities",
     },
     {
-      src: "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=600&h=400&fit=crop",
-      alt: "Infant care",
-      category: "Infant Care",
+      src: "/images/gallery/4.jpeg",
+      alt: "Play time",
     },
     {
-      src: "https://images.unsplash.com/photo-1567448400815-46da0c3949e8?w=600&h=400&fit=crop",
-      alt: "Toddler activities",
-      category: "Toddler",
+      src: "/images/gallery/5.jpeg",
+      alt: "Creative activities",
     },
     {
-      src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop",
-      alt: "Preschool learning",
-      category: "Preschool",
+      src: "/images/gallery/6.jpeg",
+      alt: "Fun moments",
     },
     {
-      src: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&h=400&fit=crop",
-      alt: "Art activities",
-      category: "Art",
+      src: "/images/gallery/7.jpeg",
+      alt: "Daily activities",
     },
     {
-      src: "https://images.unsplash.com/photo-1526634332515-d56c5fd16991?w=600&h=400&fit=crop",
-      alt: "Reading time",
-      category: "Learning",
+      src: "/images/gallery/8.jpeg",
+      alt: "Happy children",
     },
     {
-      src: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&h=400&fit=crop",
-      alt: "Outdoor play",
-      category: "Outdoor",
+      src: "/images/gallery/9.jpeg",
+      alt: "Learning together",
     },
     {
-      src: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&h=400&fit=crop",
-      alt: "Music and movement",
-      category: "Music",
+      src: "/images/gallery/10.jpeg",
+      alt: "Enjoying daycare",
     },
   ];
-
-  const categories = ["All", "Learning", "Play", "Outdoor", "Art"];
 
   return (
     <>
@@ -100,19 +88,6 @@ export default function GalleryPage() {
       {/* Gallery Section */}
       <section className="section bg-white">
         <div className="container-custom">
-          {/* Filter Buttons */}
-          <div className="flex justify-center gap-4 flex-wrap mb-12">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant="ghost"
-                className="px-6 py-2 bg-cream hover:bg-primary hover:text-white rounded-full font-semibold text-navy"
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
-
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (

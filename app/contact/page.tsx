@@ -13,9 +13,9 @@ import {
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us | Millcreek Home Childcare",
   description:
-    "Get in touch with Millcreek Home Childcare. Schedule a tour, ask questions, or learn more about enrollment.",
+    "Have questions about Millcreek Home Childcare? Contact us to learn more about our programs, availability, and enrollment process.",
 };
 
 export default function ContactPage() {
@@ -23,25 +23,25 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Location",
-      content: "123 Millcreek Lane\nYour City, State 12345",
+      content: "Mill Creek Home Childcare\n7300, Miller Fall Road\nRockville, MD 20855",
       color: "#48D1CC",
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "(123) 456-7890",
+      content: "(305) 321-0846",
       color: "#EED7F0",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@millcreekchildcare.com",
+      content: "bfali414@gmail.com",
       color: "#8ADDE6",
     },
     {
       icon: Clock,
       title: "Hours",
-      content: "Monday - Friday\n7:00 AM - 6:00 PM",
+      content: "Monday – Friday\n7:00 AM – 6:00 PM",
       color: "#4877AD",
     },
   ];
@@ -58,18 +58,39 @@ export default function ContactPage() {
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/" className="text-primary hover:text-pink-dark">Home</Link>
+                  <Link
+                    href="/"
+                    className="text-primary hover:text-pink-dark"
+                  >
+                    Home
+                  </Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage className="text-navy/70">Contact</BreadcrumbPage>
+                <BreadcrumbPage className="text-navy/70">
+                  Contact Us
+                </BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <h1 className="text-navy mb-4">Contact Us</h1>
+
+          <h1 className="text-navy mb-4">We’re Here to Help</h1>
+
           <p className="text-xl text-navy/80 max-w-2xl mx-auto">
-            We&apos;d love to hear from you and show you around
+            Have a question about our childcare programs, daily routines, or
+            enrollment process? Reach out anytime and we’ll be happy to help.
+          </p>
+
+          {/* Intent clarity */}
+          <p className="mt-6 text-sm text-navy/60">
+            Looking to visit in person?{" "}
+            <Link
+              href="/book-tour"
+              className="text-primary font-semibold underline"
+            >
+              Schedule a daycare tour
+            </Link>
           </p>
         </div>
       </section>
@@ -80,10 +101,12 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Contact Info */}
             <div className="lg:col-span-2">
-              <h2 className="text-3xl mb-6">Get In Touch</h2>
+              <h2 className="text-3xl mb-4">Get in Touch</h2>
+
               <p className="text-navy/70 mb-8">
-                Have questions about our programs or want to schedule a tour?
-                We&apos;re here to help! Reach out to us through any of the methods below.
+                We know choosing childcare is a big decision. Whether you’re
+                gathering information or just starting your search, we’re happy
+                to answer your questions and guide you.
               </p>
 
               <div className="space-y-6">
@@ -93,17 +116,38 @@ export default function ContactPage() {
                     <div key={index} className="flex gap-4">
                       <div
                         className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
-                        style={{ backgroundColor: info.color + '30' }}
+                        style={{ backgroundColor: `${info.color}30` }}
                       >
-                        <IconComponent className="h-6 w-6" style={{ color: info.color }} />
+                        <IconComponent
+                          className="h-6 w-6"
+                          style={{ color: info.color }}
+                        />
                       </div>
                       <div>
-                        <h4 className="font-bold text-navy mb-1">{info.title}</h4>
-                        <p className="text-navy/70 whitespace-pre-line">{info.content}</p>
+                        <h4 className="font-bold text-navy mb-1">
+                          {info.title}
+                        </h4>
+                        <p className="text-navy/70 whitespace-pre-line">
+                          {info.content}
+                        </p>
                       </div>
                     </div>
                   );
                 })}
+              </div>
+
+              {/* Secondary CTA */}
+              <div className="mt-10 p-4 rounded-xl bg-secondary/10">
+                <p className="text-sm text-navy/70">
+                  Want to see our space, meet our caregivers, and experience our
+                  environment firsthand?
+                </p>
+                <Link
+                  href="/book-tour"
+                  className="inline-block mt-2 text-primary font-semibold underline"
+                >
+                  Book a daycare tour →
+                </Link>
               </div>
             </div>
 
@@ -118,17 +162,20 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="bg-cream">
         <Card className="border-0 rounded-none">
-          <CardContent className="p-0 h-96 bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
-            <div className="flex items-center gap-2 text-white text-lg">
-              <MapPin className="h-6 w-6" />
-              <span>Interactive map would be embedded here</span>
-            </div>
+          <CardContent className="p-0 h-96">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.5!2d-77.1!3d39.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDA2JzAwLjAiTiA3N8KwMDYnMDAuMCJX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus&q=7300+Miller+Fall+Road,+Rockville,+MD+20855"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Mill Creek Home Childcare Location"
+            />
           </CardContent>
         </Card>
       </section>
     </>
   );
 }
-
-
-

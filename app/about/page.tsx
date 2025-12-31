@@ -81,20 +81,13 @@ export default function AboutPage() {
       <section className="section bg-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <div className="relative flex justify-center items-center h-full">
               <Image
-                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=500&fit=crop"
-                alt="Children learning together"
-                width={600}
-                height={500}
-                className="rounded-2xl shadow-soft-lg"
-              />
-              <Image
-                src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=300&h=250&fit=crop"
-                alt="Happy child playing"
-                width={300}
-                height={250}
-                className="absolute -bottom-8 -right-8 rounded-2xl shadow-soft-lg border-4 border-white hidden md:block"
+                src="/images/pic1.jpg"
+                alt="Children learning together at Mill Creek Home Childcare"
+                width={500}
+                height={400}
+                className="rounded-2xl shadow-soft-lg object-cover w-full max-w-md"
               />
             </div>
             <div>

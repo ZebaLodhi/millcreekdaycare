@@ -1,29 +1,42 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Blocks, Home, Users, TreePine } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 export default function Features() {
-  const features = [
+  const features: {
+    icon: LucideIcon;
+    title: string;
+    description: string;
+    color: string;
+  }[] = [
     {
-      icon: "📚",
+      icon: Blocks,
       title: "Play-Based Learning",
-      description: "Children learn best through play. Our curriculum encourages exploration, creativity, and hands-on discovery.",
+      description:
+        "Children learn best through play. Our curriculum encourages exploration, creativity, and hands-on discovery.",
       color: "#48D1CC",
     },
     {
-      icon: "🏠",
+      icon: Home,
       title: "Home Environment",
-      description: "A cozy, home-like setting provides comfort and security, helping children feel safe and ready to learn.",
+      description:
+        "A cozy, home-like setting provides comfort and security, helping children feel safe and ready to learn.",
       color: "#8ADDE6",
     },
     {
-      icon: "👨‍👩‍👧‍👦",
+      icon: Users,
       title: "Small Group Sizes",
-      description: "Individual attention ensures each child receives personalized care tailored to their unique needs.",
+      description:
+        "Individual attention ensures each child receives personalized care tailored to their unique needs.",
       color: "#EED7F0",
     },
     {
-      icon: "🌱",
+      icon: TreePine,
       title: "Outdoor Exploration",
-      description: "Daily outdoor activities promote physical development and a love for nature and the environment.",
+      description:
+        "Daily outdoor activities promote physical development and a love for nature and the environment.",
       color: "#4877AD",
     },
   ];
@@ -44,9 +57,22 @@ export default function Features() {
               style={{ borderTop: `4px solid ${feature.color}` }}
             >
               <CardHeader className="p-0 pb-4">
-                <div className="text-5xl mb-4">{feature.icon}</div>
-                <CardTitle className="text-xl text-primary">{feature.title}</CardTitle>
+                {/* ICON */}
+                <div
+                  className="mx-auto mb-4 w-14 h-14 flex items-center justify-center rounded-full"
+                  style={{ backgroundColor: `${feature.color}20` }}
+                >
+                  <feature.icon
+                    className="w-7 h-7"
+                    style={{ color: feature.color }}
+                  />
+                </div>
+
+                <CardTitle className="text-xl text-primary">
+                  {feature.title}
+                </CardTitle>
               </CardHeader>
+
               <CardContent className="p-0">
                 <p className="text-navy/70">{feature.description}</p>
               </CardContent>
@@ -57,6 +83,3 @@ export default function Features() {
     </section>
   );
 }
-
-
-
