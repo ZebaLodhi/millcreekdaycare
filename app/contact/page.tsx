@@ -2,20 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Millcreek Home Childcare",
+  title: "Contact Us | Mill Creek Childcare",
   description:
-    "Have questions about Millcreek Home Childcare? Contact us to learn more about our programs, availability, and enrollment process.",
+    "Have questions about Mill Creek Childcare? Contact us to learn more about our programs, availability, and enrollment process.",
 };
 
 export default function ContactPage() {
@@ -23,7 +15,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Location",
-      content: "Mill Creek Home Childcare\n7300, Miller Fall Road\nRockville, MD 20855",
+      content: "Mill Creek Childcare\n7300, Miller Fall Road\nRockville, MD 20855",
       color: "#48D1CC",
     },
     {
@@ -54,28 +46,7 @@ export default function ContactPage() {
         <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
 
         <div className="container-custom relative z-10 text-center">
-          <Breadcrumb className="justify-center mb-6">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link
-                    href="/"
-                    className="text-primary hover:text-pink-dark"
-                  >
-                    Home
-                  </Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-navy/70">
-                  Contact Us
-                </BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-
-          <h1 className="text-navy mb-4">We’re Here to Help</h1>
+          <h1 className="text-navy mb-4">We're Here to Help</h1>
 
           <p className="text-xl text-navy/80 max-w-2xl mx-auto">
             Have a question about our childcare programs, daily routines, or
@@ -171,7 +142,7 @@ export default function ContactPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Mill Creek Home Childcare Location"
+              title="Mill Creek Childcare Location"
             />
           </CardContent>
         </Card>

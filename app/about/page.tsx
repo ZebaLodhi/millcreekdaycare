@@ -1,22 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import CTA from "@/components/CTA";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Millcreek Home Childcare - our experienced caregivers, nurturing environment, and commitment to early childhood education.",
+    "Learn about Mill Creek Childcare - our experienced caregivers, nurturing environment, and commitment to early childhood education.",
 };
 
 export default function AboutPage() {
@@ -52,27 +43,14 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-cream via-cream-light to-secondary/20 relative overflow-hidden">
+      <section className="pt-28 pb-12 bg-gradient-to-br from-cream via-cream-light to-secondary/20 relative overflow-hidden flex items-center">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-pink/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
         <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
 
-        <div className="container-custom relative z-10 text-center">
-          <Breadcrumb className="justify-center mb-6">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/" className="text-primary hover:text-pink-dark">Home</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-navy/70">About Us</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+        <div className="container-custom relative z-10 text-center mt-12">
           <h1 className="text-navy mb-4">About Us</h1>
           <p className="text-xl text-navy/80 max-w-2xl mx-auto">
-            Discover the heart behind Millcreek Home Childcare
+            Discover the heart behind Mill Creek Childcare
           </p>
         </div>
       </section>
@@ -84,7 +62,7 @@ export default function AboutPage() {
             <div className="relative flex justify-center items-center h-full">
               <Image
                 src="/images/pic1.jpg"
-                alt="Children learning together at Mill Creek Home Childcare"
+                alt="Children learning together at Mill Creek Childcare"
                 width={500}
                 height={400}
                 className="rounded-2xl shadow-soft-lg object-cover w-full max-w-md"
@@ -96,7 +74,7 @@ export default function AboutPage() {
               </Badge>
               <h2 className="text-3xl md:text-4xl mb-6">A Place Where Children Flourish</h2>
               <p className="text-navy/70 mb-4">
-                At Millcreek Home Childcare, we believe every child deserves a nurturing environment
+                At Mill Creek Childcare, we believe every child deserves a nurturing environment
                 that supports their natural curiosity and love of learning. Our experienced caregivers
                 create meaningful experiences that help children develop confidence, creativity, and
                 essential life skills.

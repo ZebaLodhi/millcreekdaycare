@@ -10,7 +10,7 @@ import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Millcreek Home Childcare - Where Every Child's Journey Begins",
+  title: "Mill Creek Childcare - Where Every Child's Journey Begins",
   description:
     "A warm, nurturing home environment where children learn, grow, and thrive through play-based discovery and personalized care.",
   alternates: {
@@ -22,7 +22,7 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ChildCare",
-    name: "Millcreek Home Childcare",
+    name: "Mill Creek Childcare",
     description:
       "A warm, nurturing home environment where children learn, grow, and thrive through play-based discovery and personalized care.",
     url: "https://millcreekchildcare.com",

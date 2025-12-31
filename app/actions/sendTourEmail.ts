@@ -16,7 +16,7 @@ export type TourFormData = {
 
 export async function sendTourEmail(data: TourFormData) {
   await resend.emails.send({
-    from: 'Mill Creek Home Childcare <hello@millcreekhomechildcare.com>',
+    from: 'Mill Creek Childcare <hello@millcreekhomechildcare.com>',
     to: ['bfali414@gmail.com'],
     replyTo: data.email,
     subject: 'New Daycare Tour Request',

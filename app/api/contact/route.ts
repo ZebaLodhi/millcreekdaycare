@@ -45,7 +45,7 @@ export async function POST(request: Request) {
         : program || 'Not specified'
 
     const { data, error } = await resend.emails.send({
-      from: 'Millcreek Childcare <onboarding@resend.dev>',
+      from: 'Mill Creek Childcare <onboarding@resend.dev>',
       to: ['bfali414@gmail.com'], // replace with verified address later
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,

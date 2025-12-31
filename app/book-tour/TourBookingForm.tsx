@@ -114,7 +114,7 @@ export default function TourBookingForm() {
           </h3>
 
           <p className="text-navy/70 mb-6 max-w-md mx-auto">
-            Thank you for your interest in Millcreek Home Childcare. We’ll contact you
+            Thank you for your interest in Mill Creek Childcare. We’ll contact you
             within 24 hours to confirm your visit.
           </p>
 

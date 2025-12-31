@@ -21,7 +21,7 @@ export default function ProgramsPreview() {
       age: '18 months - 3 years',
       description:
         'Active learning experiences that support language development, motor skills, and growing independence.',
-      image: '/images/toddler.jpg',
+      image: '/images/toddler1.jpg',
     },
     {
       id: 'preschool',

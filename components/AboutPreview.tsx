@@ -28,7 +28,7 @@ export default function AboutPreview() {
               Meet Batool
             </h2>
             <p className="text-navy/70 mb-4">
-              As the owner and primary caregiver at Mill Creek Home Childcare, I'm a devoted mother of 3 children, with 6 years of experience in child care. I hold an Associate's Degree in Computer Science and I am deeply passionate about fostering a supportive and educational environment for children.
+              As the owner and primary caregiver at Mill Creek Childcare, I'm a devoted mother of 3 children, with 6 years of experience in child care. I hold an Associate's Degree in Computer Science and I am deeply passionate about fostering a supportive and educational environment for children.
             </p>
             <p className="text-navy/70 mb-6">
               I decided to open my own daycare because of my love for nurturing young minds and witnessing their developmental milestones. I strive to provide a clean, secure, and compassionate space where children can learn, grow, and thrive.

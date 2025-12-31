@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import CTA from "@/components/CTA";
 import { Badge } from "@/components/ui/badge";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -76,19 +67,6 @@ export default function ProgramsPage() {
         <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
 
         <div className="container-custom relative z-10 text-center">
-          <Breadcrumb className="justify-center mb-6">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/" className="text-primary hover:text-pink-dark">Home</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-navy/70">Programs</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
           <h1 className="text-navy mb-4">Our Programs</h1>
           <p className="text-xl text-navy/80 max-w-2xl mx-auto">
             Age-appropriate programs designed to nurture growth at every stage

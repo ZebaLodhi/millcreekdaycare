@@ -31,8 +31,8 @@ const railey = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://millcreekchildcare.com'),
   title: {
-    default: 'Millcreek Home Childcare - Nurturing Young Minds',
-    template: '%s | Millcreek Home Childcare',
+    default: 'Mill Creek Childcare - Nurturing Young Minds',
+    template: '%s | Mill Creek Childcare',
   },
   description:
     'A warm, nurturing home environment where children learn, grow, and thrive through play-based discovery and personalized care.',
@@ -46,15 +46,15 @@ export const metadata: Metadata = {
     'early childhood education',
     'play-based learning',
   ],
-  authors: [{ name: 'Millcreek Home Childcare' }],
-  creator: 'Millcreek Home Childcare',
-  publisher: 'Millcreek Home Childcare',
+  authors: [{ name: 'Mill Creek Childcare' }],
+  creator: 'Mill Creek Childcare',
+  publisher: 'Mill Creek Childcare',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://millcreekchildcare.com',
-    siteName: 'Millcreek Home Childcare',
-    title: 'Millcreek Home Childcare - Nurturing Young Minds',
+    siteName: 'Mill Creek Childcare',
+    title: 'Mill Creek Childcare - Nurturing Young Minds',
     description:
       "Where every child's journey begins. A warm, nurturing home environment for play-based discovery and personalized care.",
     images: [
@@ -62,13 +62,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Millcreek Home Childcare',
+        alt: 'Mill Creek Childcare',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Millcreek Home Childcare - Nurturing Young Minds',
+    title: 'Mill Creek Childcare - Nurturing Young Minds',
     description:
       "Where every child's journey begins. Quality home childcare with personalized attention.",
     images: ['/og-image.jpg'],

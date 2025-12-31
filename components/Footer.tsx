@@ -16,8 +16,8 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <span className="text-3xl">🏠</span>
               <div className="flex flex-col leading-tight">
-                <span className="text-xl font-display font-bold">Millcreek</span>
-                <span className="text-xs text-white/60">Home Childcare</span>
+                <span className="text-xl font-display font-bold">Mill Creek</span>
+                <span className="text-xs text-white/60">Childcare</span>
               </div>
             </div>
             <p className="text-white/80 mb-6">
@@ -145,7 +145,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <Separator className="mt-12 bg-white/20" />
         <div className="pt-8 text-center text-sm text-white/60">
-          <p>&copy; 2025 Millcreek Home Childcare. All rights reserved. Website by DigiLift For Daycare</p>
+          <p>&copy; 2025 Mill Creek Childcare. All rights reserved. Website by DigiLift For Daycare</p>
         </div>
 
       </div>

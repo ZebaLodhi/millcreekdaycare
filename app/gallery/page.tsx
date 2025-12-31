@@ -1,27 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import CTA from "@/components/CTA";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Take a peek inside Millcreek Home Childcare. See our nurturing environment, happy children, and the activities we enjoy every day.",
+    "Take a peek inside Mill Creek Childcare. See our nurturing environment, happy children, and the activities we enjoy every day.",
 };
 
 export default function GalleryPage() {
   const galleryImages = [
     {
       src: "/images/gallery/2.jpeg",
-      alt: "Children at Mill Creek Home Childcare",
+      alt: "Children at Mill Creek Childcare",
     },
     {
       src: "/images/gallery/3.jpeg",
@@ -65,19 +56,6 @@ export default function GalleryPage() {
         <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
 
         <div className="container-custom relative z-10 text-center">
-          <Breadcrumb className="justify-center mb-6">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/" className="text-primary hover:text-pink-dark">Home</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-navy/70">Gallery</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
           <h1 className="text-navy mb-4">Gallery</h1>
           <p className="text-xl text-navy/80 max-w-2xl mx-auto">
             A peek inside our nurturing environment

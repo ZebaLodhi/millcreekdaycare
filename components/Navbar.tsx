@@ -61,11 +61,11 @@ export default function Navbar() {
           <Link
             href="/"
             className="flex items-center gap-4 hover:opacity-90 transition-opacity"
-            aria-label="Mill Creek Home Childcare Home"
+            aria-label="Mill Creek Childcare Home"
           >
             <Image
               src="/images/logo.png"
-              alt="Mill Creek Home Childcare logo"
+              alt="Mill Creek Childcare logo"
               width={500}
               height={260}
               className="h-20 w-auto"
@@ -76,7 +76,7 @@ export default function Navbar() {
                 Mill Creek
               </span>
               <span className="text-sm font-medium text-navy/70">
-                Home Childcare
+                Childcare
               </span>
             </div>
           </Link>

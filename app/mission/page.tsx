@@ -1,21 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import CTA from "@/components/CTA";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { Heart, BookOpen, Palette, Sprout, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Our Mission",
   description:
-    "Discover the mission and philosophy behind Millcreek Home Childcare. Learn about our commitment to nurturing every child's potential.",
+    "Discover the mission and philosophy behind Mill Creek Childcare. Learn about our commitment to nurturing every child's potential.",
 };
 
 export default function MissionPage() {
@@ -60,19 +51,6 @@ export default function MissionPage() {
         <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
 
         <div className="container-custom relative z-10 text-center">
-          <Breadcrumb className="justify-center mb-6">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/" className="text-primary hover:text-pink-dark">Home</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-navy/70">Our Mission</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
           <h1 className="text-navy mb-4">Our Mission</h1>
           <p className="text-xl text-navy/80 max-w-2xl mx-auto">
             Guiding every child toward their fullest potential

@@ -64,7 +64,7 @@ export async function submitTourBooking(
 
   try {
     const { error } = await resend.emails.send({
-      from: 'Millcreek Childcare <onboarding@resend.dev>',
+      from: 'Mill Creek Childcare <onboarding@resend.dev>',
       to: ['bfali414@gmail.com'],
       replyTo: data.email,
       subject: `New Tour Request from ${data.parentName}`,
@@ -101,7 +101,7 @@ export async function submitTourBooking(
 
           <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
           <p style="color: #666; font-size: 12px;">
-            This tour request was submitted through the Mill Creek Home Childcare website.
+            This tour request was submitted through the Mill Creek Childcare website.
           </p>
         </div>
       `,

@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { CheckCircle } from "lucide-react";
 import TourBookingForm from "./TourBookingForm";
 
 export const metadata: Metadata = {
-  title: "Book a Daycare Tour | Millcreek Home Childcare",
+  title: "Book a Daycare Tour | Mill Creek Childcare",
   description:
-    "Schedule a relaxed, no-pressure daycare tour at Millcreek Home Childcare. Meet our caregivers, explore our space, and see if we’re the right fit for your family.",
+    "Schedule a relaxed, no-pressure daycare tour at Mill Creek Childcare. Meet our caregivers, explore our space, and see if we’re the right fit for your family.",
 };
 
 export default function BookTourPage() {
@@ -26,27 +18,6 @@ export default function BookTourPage() {
         <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
 
         <div className="container-custom relative z-10 max-w-3xl text-center">
-          <Breadcrumb className="justify-center mb-6">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link
-                    href="/"
-                    className="text-primary hover:text-pink-dark"
-                  >
-                    Home
-                  </Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-navy/70">
-                  Book a Tour
-                </BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-
           <h1 className="text-navy mb-4">
             Schedule a Daycare Tour
           </h1>
