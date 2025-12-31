@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 
@@ -44,7 +44,29 @@ const reviews = [
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0)
-  const visible = 3
+  const [visible, setVisible] = useState(3)
+
+  useEffect(() => {
+    const updateVisible = () => {
+      if (window.innerWidth < 768) {
+        setVisible(1)
+      } else if (window.innerWidth < 1024) {
+        setVisible(2)
+      } else {
+        setVisible(3)
+      }
+    }
+
+    updateVisible()
+    window.addEventListener('resize', updateVisible)
+    return () => window.removeEventListener('resize', updateVisible)
+  }, [])
+
+  // Reset index when visible count changes to prevent out-of-bounds
+  useEffect(() => {
+    setIndex(0)
+  }, [visible])
+
   const maxIndex = reviews.length - visible
 
   const next = () => setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1))
@@ -55,8 +77,9 @@ export default function Testimonials() {
       <div className="container-custom">
 
         {/* HEADER */}
-        <div className="text-center text-white mb-12">
-          <h2 className="text-4xl font-bold mb-2">What Families Are Saying</h2>
+        <div className="section-header text-white">
+          <span>What Parents Say</span>
+          <h2>What Families Are Saying</h2>
           <p className="text-white/80">
             Real Google reviews from Mill Creek Child Care families
           </p>
