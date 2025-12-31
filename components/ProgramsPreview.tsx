@@ -29,7 +29,7 @@ export default function ProgramsPreview() {
       age: '3 - 5 years',
       description:
         'Kindergarten preparation through structured learning, social skills development, and creative expression.',
-      image: '/images/gallery-1.jpg',
+      image: '/images/preschool2.jpg',
     },
   ];
 
