@@ -51,7 +51,7 @@ export default function Hero() {
           {/* RIGHT: IMAGE */}
           <div className="relative w-full max-w-[560px] mx-auto lg:mx-0">
             <Image
-              src="/images/gallery-1.jpg"
+              src="/images/toddler1.jpg"
               alt="Child learning and playing"
               width={560}
               height={440}
