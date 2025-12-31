@@ -13,7 +13,7 @@ export default function ProgramsPreview() {
       age: '6 weeks - 18 months',
       description:
         "Gentle, responsive care that nurtures your baby's development through sensory exploration and secure attachments.",
-      image: '/images/infant.jpg',
+      image: '/images/baby2.jpg',
     },
     {
       id: 'toddler',
@@ -29,7 +29,7 @@ export default function ProgramsPreview() {
       age: '3 - 5 years',
       description:
         'Kindergarten preparation through structured learning, social skills development, and creative expression.',
-      image: '/images/preschooler.jpg',
+      image: '/images/gallery-1.jpg',
     },
   ];
 
