@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Facebook, Instagram, Mail, MapPin, Phone, Home } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,7 +15,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <Home className="h-8 w-8 text-accent" />
+              <Image
+                src="/images/logo.png"
+                alt="Mill Creek Childcare Logo"
+                width={42}
+                height={42}
+                className="rounded-lg"
+              />
               <div className="flex flex-col leading-tight">
                 <span className="text-xl font-display font-bold">Mill Creek</span>
                 <span className="text-xs text-white/60">Childcare</span>
