@@ -38,7 +38,7 @@ export default function Footer() {
                 className="w-10 h-10 bg-white/10 hover:bg-accent rounded-full"
                 asChild
               >
-                <a href="#" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=100082917563311" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <Facebook className="h-5 w-5" />
                 </a>
               </Button>
@@ -48,7 +48,7 @@ export default function Footer() {
                 className="w-10 h-10 bg-white/10 hover:bg-accent rounded-full"
                 asChild
               >
-                <a href="#" aria-label="Instagram">
+                <a href="https://www.instagram.com/millcreekchildcare/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                   <Instagram className="h-5 w-5" />
                 </a>
               </Button>

@@ -17,9 +17,9 @@ export default function CTA() {
             <Link href="/contact">Schedule a Tour</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="tel:+11234567890">
+            <a href="tel:+13053210846">
               <Phone className="mr-2 h-4 w-4" />
-              Call Us Today
+              Call us! (305) 321-0846
             </a>
           </Button>
         </div>
