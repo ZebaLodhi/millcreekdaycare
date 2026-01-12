@@ -33,7 +33,7 @@ export default function ContactPage() {
     {
       icon: Clock,
       title: "Hours",
-      content: "Monday – Friday\n7:00 AM – 6:00 PM",
+      content: "Monday – Friday\n7:00 AM – 5:30 PM",
       color: "#4877AD",
     },
   ];

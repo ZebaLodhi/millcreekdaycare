@@ -13,7 +13,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="container-custom relative z-10 py-16 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-14 items-center w-full">
+        <div className="grid lg:grid-cols-2 gap-14 items-center w-full relative">
 
           {/* LEFT: TEXT */}
           <div className="flex flex-col justify-center">
@@ -32,6 +32,17 @@ export default function Hero() {
               </span>
             </h1>
 
+            {/* Maryland EXCELS Badge - Mobile */}
+            <div className="lg:hidden flex justify-center mb-6">
+              <Image
+                src="/images/image.png"
+                alt="Maryland EXCELS Quality Rating 1 – 2025"
+                width={288}
+                height={288}
+                className="w-[252px] sm:w-[288px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+              />
+            </div>
+
             <p className="max-w-[540px] text-white/90 text-lg mb-8">
               A warm, nurturing home environment where children learn, grow,
               and thrive through play-based discovery and personalized care.
@@ -46,6 +57,17 @@ export default function Hero() {
                 <Link href="/contact">Schedule a Visit</Link>
               </Button>
             </div>
+          </div>
+
+          {/* Maryland EXCELS Badge - Desktop (Between heading and image) */}
+          <div className="hidden lg:block absolute left-[45%] top-4 -translate-x-1/2 z-20">
+            <Image
+              src="/images/image.png"
+              alt="Maryland EXCELS Quality Rating 1 – 2025"
+              width={396}
+              height={396}
+              className="w-[324px] lg:w-[396px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+            />
           </div>
 
           {/* RIGHT: IMAGE */}
