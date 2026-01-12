@@ -37,7 +37,7 @@ export default function Hero() {
               and thrive through play-based discovery and personalized care.
             </p>
 
-            <div className="lg:hidden flex items-center gap-0.5 mb-8">
+            <div className="lg:hidden flex items-center gap-0 mb-8">
               <div className="flex flex-col gap-4 flex-1">
                 <Button asChild variant="secondary" size="lg" className="w-full">
                   <Link href="/programs">Explore Programs</Link>
@@ -49,7 +49,7 @@ export default function Hero() {
               </div>
 
               {/* Maryland EXCELS Badge - Mobile (Right side of buttons) */}
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 -ml-2">
                 <Image
                   src="/images/image.png"
                   alt="Maryland EXCELS Quality Rating 1 – 2025"
