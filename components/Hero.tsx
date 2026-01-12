@@ -53,9 +53,9 @@ export default function Hero() {
                 <Image
                   src="/images/image.png"
                   alt="Maryland EXCELS Quality Rating 1 – 2025"
-                  width={270}
-                  height={270}
-                  className="w-[216px] sm:w-[270px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                  width={405}
+                  height={405}
+                  className="w-[324px] sm:w-[405px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
                 />
               </div>
             </div>
@@ -76,9 +76,9 @@ export default function Hero() {
             <Image
               src="/images/image.png"
               alt="Maryland EXCELS Quality Rating 1 – 2025"
-              width={480}
-              height={480}
-              className="w-[392px] lg:w-[480px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+              width={456}
+              height={456}
+              className="w-[372px] lg:w-[456px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
             />
           </div>
 
