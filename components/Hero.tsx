@@ -53,9 +53,9 @@ export default function Hero() {
                 <Image
                   src="/images/image.png"
                   alt="Maryland EXCELS Quality Rating 1 – 2025"
-                  width={150}
-                  height={150}
-                  className="w-[120px] sm:w-[150px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                  width={270}
+                  height={270}
+                  className="w-[216px] sm:w-[270px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
                 />
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Hero() {
           </div>
 
           {/* Maryland EXCELS Badge - Desktop (Between heading and image) */}
-          <div className="hidden lg:block absolute left-[45%] top-4 -translate-x-1/2 z-20">
+          <div className="hidden lg:block absolute left-[45%] top-0 -translate-x-1/2 z-20">
             <Image
               src="/images/image.png"
               alt="Maryland EXCELS Quality Rating 1 – 2025"
