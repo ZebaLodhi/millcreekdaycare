@@ -37,7 +37,7 @@ export default function Hero() {
               and thrive through play-based discovery and personalized care.
             </p>
 
-            <div className="lg:hidden flex items-center gap-1 mb-8">
+            <div className="lg:hidden flex items-center gap-0.5 mb-8">
               <div className="flex flex-col gap-4 flex-1">
                 <Button asChild variant="secondary" size="lg" className="w-full">
                   <Link href="/programs">Explore Programs</Link>
