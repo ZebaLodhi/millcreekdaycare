@@ -49,7 +49,7 @@ export default function Hero() {
               </div>
 
               {/* Maryland EXCELS Badge - Mobile (Right side of buttons) */}
-              <div className="flex-shrink-0 -ml-2">
+              <div className="flex-shrink-0 -ml-8">
                 <Image
                   src="/images/image.png"
                   alt="Maryland EXCELS Quality Rating 1 – 2025"
