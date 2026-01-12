@@ -32,23 +32,35 @@ export default function Hero() {
               </span>
             </h1>
 
-            {/* Maryland EXCELS Badge - Mobile */}
-            <div className="lg:hidden flex justify-center mb-6">
-              <Image
-                src="/images/image.png"
-                alt="Maryland EXCELS Quality Rating 1 – 2025"
-                width={288}
-                height={288}
-                className="w-[252px] sm:w-[288px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-              />
-            </div>
-
             <p className="max-w-[540px] text-white/90 text-lg mb-8">
               A warm, nurturing home environment where children learn, grow,
               and thrive through play-based discovery and personalized care.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="lg:hidden flex items-center gap-4 mb-8">
+              <div className="flex flex-col gap-4 flex-1">
+                <Button asChild variant="secondary" size="lg" className="w-full">
+                  <Link href="/programs">Explore Programs</Link>
+                </Button>
+
+                <Button asChild variant="outline-light" size="lg" className="w-full">
+                  <Link href="/contact">Schedule a Visit</Link>
+                </Button>
+              </div>
+
+              {/* Maryland EXCELS Badge - Mobile (Right side of buttons) */}
+              <div className="flex-shrink-0">
+                <Image
+                  src="/images/image.png"
+                  alt="Maryland EXCELS Quality Rating 1 – 2025"
+                  width={150}
+                  height={150}
+                  className="w-[120px] sm:w-[150px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                />
+              </div>
+            </div>
+
+            <div className="hidden lg:flex flex-wrap gap-4">
               <Button asChild variant="secondary" size="lg">
                 <Link href="/programs">Explore Programs</Link>
               </Button>
@@ -64,9 +76,9 @@ export default function Hero() {
             <Image
               src="/images/image.png"
               alt="Maryland EXCELS Quality Rating 1 – 2025"
-              width={396}
-              height={396}
-              className="w-[324px] lg:w-[396px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+              width={480}
+              height={480}
+              className="w-[392px] lg:w-[480px] h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
             />
           </div>
 
