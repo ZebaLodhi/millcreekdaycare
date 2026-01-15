@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
@@ -9,23 +7,29 @@ import ProgramsPreview from "@/components/ProgramsPreview";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 
+/* ================================
+   Page Metadata
+   (Inherits OG + Twitter from layout.tsx)
+================================ */
+
 export const metadata: Metadata = {
-  title: "Mill Creek Childcare - Where Every Child's Journey Begins",
+  title: "Mill Creek Child Care – Where Every Child’s Journey Begins",
   description:
     "A warm, nurturing home environment where children learn, grow, and thrive through play-based discovery and personalized care.",
-  alternates: {
-    canonical: "https://millcreekchildcare.com/",
-  },
 };
+
+/* ================================
+   Home Page
+================================ */
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ChildCare",
-    name: "Mill Creek Childcare",
+    name: "Mill Creek Child Care",
     description:
       "A warm, nurturing home environment where children learn, grow, and thrive through play-based discovery and personalized care.",
-    url: "https://millcreekchildcare.com",
+    url: "https://www.millcreekhomechildcare.com",
     telephone: "(123) 456-7890",
     address: {
       "@type": "PostalAddress",
@@ -41,6 +45,7 @@ export default function Home() {
 
   return (
     <>
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -55,6 +60,3 @@ export default function Home() {
     </>
   );
 }
-
-
-

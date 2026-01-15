@@ -28,7 +28,7 @@ Create a `.env.local` file for environment-specific settings:
 
 ```env
 # Site URL (for SEO)
-NEXT_PUBLIC_SITE_URL=https://millcreekchildcare.com
+NEXT_PUBLIC_SITE_URL=https://www.millcreekhomechildcare.com
 
 # Contact Form (if using an email service)
 # EMAIL_SERVICE_API_KEY=your_api_key

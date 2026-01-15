@@ -2,7 +2,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://millcreekchildcare.com/sitemap.xml
+Sitemap: https://www.millcreekhomechildcare.com/sitemap.xml
 
 
 

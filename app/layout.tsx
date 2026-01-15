@@ -17,7 +17,7 @@ const fredoka = Fredoka({
   display: 'swap',
 })
 
-/* Railey – Canva logo font (FIXED filename) */
+/* Railey – logo font */
 const railey = localFont({
   src: '../public/fonts/Railey-PersonalUse.ttf',
   variable: '--font-railey',
@@ -25,19 +25,25 @@ const railey = localFont({
 })
 
 /* ================================
-   Metadata
+   Metadata (SEO + Facebook Fix)
 ================================ */
 
+const SITE_URL = 'https://www.millcreekhomechildcare.com'
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://millcreekchildcare.com'),
+  metadataBase: new URL(SITE_URL),
+
   title: {
-    default: 'Mill Creek Childcare - Nurturing Young Minds',
-    template: '%s | Mill Creek Childcare',
+    default: 'Mill Creek Child Care – Nurturing Young Minds',
+    template: '%s | Mill Creek Child Care',
   },
+
   description:
     'A warm, nurturing home environment where children learn, grow, and thrive through play-based discovery and personalized care.',
+
   keywords: [
-    'home childcare',
+    'home child care',
     'daycare',
     'childcare',
     'preschool',
@@ -45,34 +51,39 @@ export const metadata: Metadata = {
     'toddler program',
     'early childhood education',
     'play-based learning',
+    'family daycare',
   ],
-  authors: [{ name: 'Mill Creek Childcare' }],
-  creator: 'Mill Creek Childcare',
-  publisher: 'Mill Creek Childcare',
+
+  authors: [{ name: 'Mill Creek Child Care' }],
+  creator: 'Mill Creek Child Care',
+  publisher: 'Mill Creek Child Care',
+
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://millcreekchildcare.com',
-    siteName: 'Mill Creek Childcare',
-    title: 'Mill Creek Childcare - Nurturing Young Minds',
+    url: SITE_URL,
+    siteName: 'Mill Creek Child Care',
+    title: 'Mill Creek Child Care – Nurturing Young Minds',
     description:
-      "Where every child's journey begins. A warm, nurturing home environment for play-based discovery and personalized care.",
+      "Where every child’s journey begins. A warm, nurturing home environment for play-based learning and personalized care.",
     images: [
       {
-        url: '/og-image.jpg',
+        url: OG_IMAGE, // ✅ ABSOLUTE URL (CRITICAL)
         width: 1200,
         height: 630,
-        alt: 'Mill Creek Childcare',
+        alt: 'Mill Creek Child Care – Trusted Home Daycare',
       },
     ],
   },
+
   twitter: {
     card: 'summary_large_image',
-    title: 'Mill Creek Childcare - Nurturing Young Minds',
+    title: 'Mill Creek Child Care – Nurturing Young Minds',
     description:
-      "Where every child's journey begins. Quality home childcare with personalized attention.",
-    images: ['/og-image.jpg'],
+      'Trusted home child care with personalized attention and play-based learning.',
+    images: [OG_IMAGE], // ✅ ABSOLUTE URL
   },
+
   robots: {
     index: true,
     follow: true,
@@ -84,6 +95,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+
   icons: {
     icon: '/favicon.ico',
   },
@@ -99,10 +111,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`${fredoka.variable} ${railey.variable}`}
-    >
+    <html lang="en" className={`${fredoka.variable} ${railey.variable}`}>
       <body className="font-fredoka antialiased">
         <Navbar />
         <main className="min-h-screen">{children}</main>
@@ -111,5 +120,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
