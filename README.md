@@ -1,6 +1,7 @@
 # 🏠 Millcreek Home Childcare
 
-A modern, responsive website for Millcreek Home Childcare built with Next.js 15, TypeScript, and Tailwind CSS.
+A vibe-coded and responsive website for Millcreek Home Childcare built with Next.js 15, TypeScript, and Tailwind CSS. 
+AI tools used: Cursor and OpenAI Chat GPT 5
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue)
