@@ -48,8 +48,8 @@ export async function submitTourBooking(
 
   // Format the preferred time for display
   const timeLabels: Record<string, string> = {
-    morning: 'Morning (9:00 AM - 12:00 PM)',
-    afternoon: 'Afternoon (1:00 PM - 4:00 PM)',
+    'weekday-evening': 'Weekday Evening (After 5:30 PM)',
+    'weekend-morning': 'Weekend Morning (9:00 AM - 12:00 PM)',
   };
 
   // Format the date for display
