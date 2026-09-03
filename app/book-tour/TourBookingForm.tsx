@@ -90,10 +90,38 @@ export default function TourBookingForm() {
     }
   };
 
+  // Determine whether a yyyy-mm-dd date string falls on a weekday or weekend.
+  // Parsed as local calendar date (not UTC) to avoid off-by-one day shifts.
+  const getDayType = (dateStr: string): 'weekday' | 'weekend' | null => {
+    if (!dateStr) return null;
+    const [year, month, day] = dateStr.split('-').map(Number);
+    if (!year || !month || !day) return null;
+    const dow = new Date(year, month - 1, day).getDay(); // 0 = Sun, 6 = Sat
+    return dow === 0 || dow === 6 ? 'weekend' : 'weekday';
+  };
+
+  const dayType = getDayType(formData.preferredDate);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    if (name === 'preferredDate') {
+      const newDayType = getDayType(value);
+      const timeStillValid =
+        (formData.preferredTime === 'weekday-evening' && newDayType === 'weekday') ||
+        (formData.preferredTime === 'weekend-morning' && newDayType === 'weekend');
+
+      setFormData({
+        ...formData,
+        preferredDate: value,
+        preferredTime: timeStillValid ? formData.preferredTime : '',
+      });
+      return;
+    }
+
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSelectChange = (field: string, value: string) => {
@@ -246,6 +274,9 @@ export default function TourBookingForm() {
                 onChange={handleChange}
                 className="h-12 rounded-xl border-2 border-secondary bg-white"
               />
+              <p className="text-xs text-navy/60">
+                Tours are weekday evenings after 5:30 PM, or weekend mornings 9:00 AM–12:00 PM.
+              </p>
             </div>
 
             <div className="space-y-2">
@@ -255,14 +286,20 @@ export default function TourBookingForm() {
               <Select
                 value={formData.preferredTime}
                 onValueChange={(v) => handleSelectChange('preferredTime', v)}
-                disabled={isSubmitting}
+                disabled={isSubmitting || !formData.preferredDate}
               >
                 <SelectTrigger className="h-12 rounded-xl border-2 border-secondary bg-white">
-                  <SelectValue placeholder="Select time…" />
+                  <SelectValue
+                    placeholder={formData.preferredDate ? 'Select time…' : 'Pick a date first'}
+                  />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="weekday-evening">Weekday Evening (After 5:30 PM)</SelectItem>
-                  <SelectItem value="weekend-morning">Weekend Morning (9:00 AM–12:00 PM)</SelectItem>
+                  {dayType === 'weekday' && (
+                    <SelectItem value="weekday-evening">Weekday Evening (After 5:30 PM)</SelectItem>
+                  )}
+                  {dayType === 'weekend' && (
+                    <SelectItem value="weekend-morning">Weekend Morning (9:00 AM–12:00 PM)</SelectItem>
+                  )}
                 </SelectContent>
               </Select>
             </div>
